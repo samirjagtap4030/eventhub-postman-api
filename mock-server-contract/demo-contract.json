@@ -1,0 +1,50 @@
+{
+  "name": "Demo Mock Contract",
+  "description": "Sample contract used only to smoke-test the mock-server setup. Independent of the app's real API reference by design — replace with the real contract when ready.",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/ping",
+      "description": "Health check",
+      "response": {
+        "status": 200,
+        "body": { "message": "xxxxxxxx" }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/greet",
+      "description": "Echo a greeting back",
+      "requestBody": { "name": "string" },
+      "response": {
+        "status": 200,
+        "body": { "data": { "greeting": "Hello, {{name}}!" } }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/widgets/:id",
+      "description": "Fetch a demo widget by id",
+      "response": {
+        "status": 200,
+        "body": {
+          "data": {
+            "id": 1,
+            "name": "Sample Widget",
+            "price": 9.99,
+            "inStock": true
+          }
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/widgets/999",
+      "description": "Widget not found",
+      "response": {
+        "status": 404,
+        "body": { "message": "xxxxxxxx" }
+      }
+    }
+  ]
+}

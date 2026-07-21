@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+
+# Build output
+.next/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Postman & Newman reports
+postman/results/
+newman/
+
+# Playwright test results
+test-results/
+playwright-report/
+
+# Temp Excel lock files
+~$*.xlsx
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Playwright MCP temp files
+.playwright-mcp/
+
+# Claude Code local settings (may contain tokens/permissions)
+.claude/settings.local.json
