@@ -687,6 +687,21 @@ Invoke-Item "postman\results\bookings-report.html"
 
 The `htmlextra` reporter shows: pass/fail per request, full request/response bodies, assertion details, timing breakdown, and failure root cause.
 
+**Dual-environment proof — same collection, two backends:**
+
+![Newman run — EventHub Local (20 requests, 71 assertions, 0 failed)](docs/screenshots/postman-local-run.png)
+*Bookings collection run against the local backend*
+
+![Newman run — EventHub Mock (4 requests, 19 assertions, 0 failed)](docs/screenshots/postman-mock-run.png)
+*Mock-server-first workflow — same test approach validated against the Postman mock*
+
+### Test Design
+
+Every request is planned before automation — endpoint, method, auth requirement, request body, and expected status:
+
+![Bookings API test plan](docs/screenshots/postman-test-plan.png)
+*Excerpt from the test-design spreadsheet driving the collection*
+
 ---
 
 ## Contributing
